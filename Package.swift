@@ -1,10 +1,14 @@
 // swift-tools-version:4.2
 
 import PackageDescription
-// package 
+// package
 let package = Package(
     name: "Ciao",
+    products: [
+        .library(name: "Ciao", targets: ["Ciao"])
+    ],
     dependencies: [],
-    exclude: ["Tests"],
-    swiftLanguageVersions: [.v4, .v4_2]
+    targets: [
+        .target(name: "Ciao", dependencies: [], path: "Sources/")
+    ]
 )
